@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0059)http://vocomfest.sv.ugm.ac.id/grader/team/problem.php?id=47 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<style>
+div#exp
+{
+	 border: 1px solid #0cc;
+	 background: #adc;
+	 padding: 5px;
+	 margin-bottom: 1em;
+}
+
+div#warn
+{
+	 border: 1px solid #900;
+	 background: #d22;
+	 padding: 5px;
+}
+
+.code
+{
+	 font-family: "Courier New", monospace;
+	 font-size: 12pt;
+}
+
+.bold
+{ 
+	 font-weight: bold;
+}
+
+pre.io
+{
+	 border: 1px solid #ccc;
+	 background: white;
+	 padding: 5px;
+}
+
+pre.code
+{
+	 border: 1px solid #ccc;
+	 background: white;
+	 padding: 5px;
+	 margin-left: 30px;
+}
+
+body
+{
+	 background-color: #FFFFCC; 
+	 font-size: 12pt;
+	 font-family: verdana;
+	 margin: 15px;
+	 padding: 15px;
+}
+
+h1
+{
+	 text-align: center;
+	 font-family: times, "times new roman";
+	 font-size: 18pt;
+}
+
+h2
+{
+	 font-size: 12pt;
+	 font-family: garamond, verdana, arial;
+	 margin-top: 30px;
+}
+
+h3
+{
+	 font-size: 12pt;
+	 font-family: garamond, verdana, arial;
+	 margin-top: 0px;
+}
+
+p
+{
+	 text-align: justify;
+	 line-height: 1.5em;
+}
+
+hr
+{
+	 text-align: left;
+	 width: 10%;
+}
+
+table#header
+{
+	 width: 100%;
+	 font-family: garamond, arial, verdana;
+	 font-size: 12pt;
+}
+
+table#header td.judul
+{
+	 text-align: right;
+	 font-weight: bold;
+}
+
+table#header td
+{
+	 padding: 0px 5px 0px 5px;
+	 width: 50%;
+}
+
+</style>
+<title>UNBREAKABLE</title>
+</head>
+
+<body>
+<center>
+<table cellpadding="20" width="100%">
+<tbody><tr>
+<td id="Base">
+
+<!-- title -->
+<h1>UNBREAKABLE</h1>
+
+<!-- author -->
+<div id="penulis"></div>
+<!-- header -->
+<table id="header">
+	 <tbody>
+	 <tr>
+		<td class="judul">Time Limit :</td>
+		<td>1 second / test-case</td>
+	</tr>
+	<tr>
+		 <td class="judul">Memory Limit :</td>
+		<td>64 MB</td>
+	 </tr>
+</tbody></table>
+
+<!-- problem statement -->
+<div id="problem">
+<h2>DESCRIPTION</h2>
+<p><i>A security guard named David Dunn is coming home from work, when the train he is on is suddenly derailed, the train crashes, and he is the sole survivor, out of 132 people. Without a scratch on his body. - Unbreakable (2000).</i></p>
+
+<p>Mr. Blangkon believes that there is someone who can be called The Unbreakable. A kind of person who is born with immunity above the average human in general. Mr. Blangkon analyzed several train accidents that have occurred, help Mr. Blangkon to find out whether there is The Unbreakable among the passengers.</p>
+
+<p>You will be given two arrays of integers, A and B, which indicate the health condition of the passengers before and after the accident. The i-th value of the array shows the level of health of passengers who are in the i-th position. After an accident, the passenger position may be changed and not the same as the position before the accident. Determine whether there is The Unbreakable among the passengers. The Unbreakable is a person that has the same health level before and after the accident.</p>
+
+<!-- format input -->
+<h2>INPUT FORMAT</h2>
+<p>The first line of the input contains an integer T, denoting the number of cases. Each case consist of three line :</p>
+<ul>
+	<li>The first line contains an integers N, the number of the passenger.</li>
+	<li>The second line contains N integers (a<sub>1</sub>, a<sub>2</sub>, …, a<sub>N</sub>) denoting the health level of the i<sup>th</sup> passenger before the accident.</li>
+	<li>The third line contains N integers (b<sub>1</sub>, b<sub>2</sub>, …, b<sub>N</sub>) denoting the health level of the i<sup>th</sup> passenger after the accident.</li>
+</ul>
+
+
+<!-- format output -->
+<h2>OUTPUT FORMAT</h2>
+<p>For each case, print “EXIST” if there is at least one the Unbreakable among the passengers. Print “MAY EXIST” if there is a possibility (not 100%) that the Unbreakable is exist. Print “NOT EXIST” if you pretty sure that there are no possibility the Unbreakebale exist among the passengers.</p>
+
+<!-- sample input -->
+<div id="sampleinput">
+<h2>INPUT EXAMPLE</h2>
+<pre class="io">3
+5
+3 3 3 3 3
+1 0 0 0 1
+5
+2 3 1 4 1
+0 0 0 1 0
+5
+2 3 1 4 1
+1 1 0 1 1
+
+</pre>
+</div>
+
+<!-- sample output -->
+<div id="sampleoutput">
+<h2>OUTPUT EXAMPLE</h2>
+<pre class="io">Case #1: NOT EXIST
+Case #2: MAY EXIST
+Case #3: EXIST
+
+</pre>
+</div>
+
+<h2>CONSTRAINTS</h2>
+<ul>
+	<li>1 ≤ T ≤ 20</li>
+	<li>1 ≤ N ≤ 10<sup>4</sup></li>
+	<li>1 ≤ a<sub>i</sub> ≤ 100</li>
+	<li>0 ≤ b<sub>i</sub> ≤ 100</li>
+</ul>
+
+</div></td>
+</tr></tbody>
+</table>
+</center>
+
+</body></html>

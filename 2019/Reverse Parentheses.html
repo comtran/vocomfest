@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0059)http://vocomfest.sv.ugm.ac.id/grader/team/problem.php?id=45 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<style>
+div#exp
+{
+	 border: 1px solid #0cc;
+	 background: #adc;
+	 padding: 5px;
+	 margin-bottom: 1em;
+}
+
+div#warn
+{
+	 border: 1px solid #900;
+	 background: #d22;
+	 padding: 5px;
+}
+
+.code
+{
+	 font-family: "Courier New", monospace;
+	 font-size: 12pt;
+}
+
+.bold
+{ 
+	 font-weight: bold;
+}
+
+pre.io
+{
+	 border: 1px solid #ccc;
+	 background: white;
+	 padding: 5px;
+}
+
+pre.code
+{
+	 border: 1px solid #ccc;
+	 background: white;
+	 padding: 5px;
+	 margin-left: 30px;
+}
+
+body
+{
+	 background-color: #FFFFCC; 
+	 font-size: 12pt;
+	 font-family: verdana;
+	 margin: 15px;
+	 padding: 15px;
+}
+
+h1
+{
+	 text-align: center;
+	 font-family: times, "times new roman";
+	 font-size: 18pt;
+}
+
+h2
+{
+	 font-size: 12pt;
+	 font-family: garamond, verdana, arial;
+	 margin-top: 30px;
+}
+
+h3
+{
+	 font-size: 12pt;
+	 font-family: garamond, verdana, arial;
+	 margin-top: 0px;
+}
+
+p
+{
+	 text-align: justify;
+	 line-height: 1.5em;
+}
+
+hr
+{
+	 text-align: left;
+	 width: 10%;
+}
+
+table#header
+{
+	 width: 100%;
+	 font-family: garamond, arial, verdana;
+	 font-size: 12pt;
+}
+
+table#header td.judul
+{
+	 text-align: right;
+	 font-weight: bold;
+}
+
+table#header td
+{
+	 padding: 0px 5px 0px 5px;
+	 width: 50%;
+}
+
+table#deskripsi-tabel
+{
+	 margin-left: 44%;
+	 width: 13%;
+	 text-align: center;
+	 font-family: verdana;
+	 font-size: 12pt;
+	 border: 1px solid black;
+	 border-collapse: collapse;
+}
+
+table#deskripsi-tabel td
+{
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+</style>
+<title>Reverse Parentheses</title>
+</head>
+
+<body>
+<center>
+<table cellpadding="20" width="100%">
+<tbody><tr>
+<td id="Base">
+
+<!-- title -->
+<h1>Reverse %28%29s</h1>
+
+<!-- author -->
+<div id="penulis"></div>
+<!-- header -->
+<table id="header">
+	 <tbody>
+	 <tr>
+		<td class="judul">Time Limit :</td>
+		<td>3 second / test-case</td>
+	</tr>
+	<tr>
+		 <td class="judul">Memory Limit :</td>
+		<td>128 MB</td>
+	 </tr>
+</tbody></table>
+
+<!-- problem statement -->
+<div id="problem">
+<h2>DESCRIPTION</h2>
+<p>Blangkon is currently learning about programming fundamentals on online platform learning. He met a problem he found challenging called "Reverse parentheses", as you know it's just reverse every character which wrapped in parentheses. Blangkon loves to share anything he find challenging to his friend, Gareng. But he knows Gareng is much smarter than him, so Blangkon decide to tweak the task before share it with Gareng by change the input into URL-encoded format string.</p>
+
+<p>URL-encoded format will change few characters to a new one that browser could accept, but it's too much of them, so Blangkon decide to take some of them, as shown bellow:</p>
+
+<table id="deskripsi-tabel">
+	<tbody><tr>
+		<td>(space)</td>
+		<td>%20</td>
+	</tr>
+	<tr>
+		<td>(</td>
+		<td>%28</td>
+	</tr>
+	<tr>
+		<td>)</td>
+		<td>%29</td>
+	</tr>
+	<tr>
+		<td>,</td>
+		<td>%2C</td>
+	</tr>
+	<tr>
+		<td>“</td>
+		<td>%22</td>
+	</tr>
+	<tr>
+		<td>‘</td>
+		<td>%27</td>
+	</tr>
+	<tr>
+		<td>!</td>
+		<td>%21</td>
+	</tr>
+	<tr>
+		<td>?</td>
+		<td>%3F</td>
+	</tr>
+</tbody></table>
+
+<p>Imagine yourself as Gareng, your task is decode the input and reverse all characters in parentheses.</p>
+
+<p>Input string will always be well-formed with matching “%28%29”s.</p>
+
+<!-- format input -->
+<h2>INPUT FORMAT</h2>
+<p>Given nonempty alphanumeric string S with URL encoded format. It is guaranteed that all parentheses in S form a regular bracket sequence.</p>
+
+
+<!-- format output -->
+<h2>OUTPUT FORMAT</h2>
+<p>The decoded format of string S with all characters in parentheses reversed.</p>
+
+<!-- sample input 1 -->
+<div id="sampleinput">
+<h2>1<sup>st</sup> INPUT EXAMPLE</h2>
+<pre class="io">%28abcde%29
+</pre>
+</div>
+
+<!-- sample output 1 -->
+<div id="sampleoutput">
+<h2>1<sup>st</sup> OUTPUT EXAMPLE</h2>
+<pre class="io">edcba
+</pre>
+</div>
+
+<!-- sample input 2 -->
+<div id="sampleinput">
+<h2>2<sup>nd</sup> INPUT EXAMPLE</h2>
+<pre class="io">Gu%28deg%29%20%28Yu%20%28Djum%29%29
+</pre>
+</div>
+
+<!-- sample output 2 -->
+<div id="sampleoutput">
+<h2>2<sup>nd</sup> OUTPUT EXAMPLE</h2>
+<pre class="io">Guged Djum uY
+</pre>
+</div>
+
+<!-- sample input 3 -->
+<div id="sampleinput">
+<h2>3<sup>rd</sup> INPUT EXAMPLE</h2>
+<pre class="io">100%%20%28%28halal%29%29%21
+</pre>
+</div>
+
+<!-- sample output 3 -->
+<div id="sampleoutput">
+<h2>3<sup>rd</sup> OUTPUT EXAMPLE</h2>
+<pre class="io">100% halal!
+</pre>
+</div>
+
+<h2>EXPLANATION</h2>
+<ul>
+	<li>For first test case <b>%28abcde%29</b> is decoded into <b>(abcde)</b>, thus Gareng will reverse the input into <b>edcba</b>.</li>
+	<li>For the second test case, <b>Gu%28deg%29%20%28Yu%20%28Djum%29%29</b> is decoded into <b>Gu(deg) (Yu (Djum))</b>, thus the answer is <b>Guged Djum Uy</b>.</li>
+</ul>
+
+<h2>CONSTRAINTS</h2>
+<ul>
+	<li>1 ≤ S ≤ 1000</li>
+</ul>
+
+</div></td>
+</tr></tbody>
+</table>
+</center>
+
+</body></html>

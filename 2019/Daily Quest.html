@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0059)http://vocomfest.sv.ugm.ac.id/grader/team/problem.php?id=44 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<style>
+div#exp
+{
+	 border: 1px solid #0cc;
+	 background: #adc;
+	 padding: 5px;
+	 margin-bottom: 1em;
+}
+
+div#warn
+{
+	 border: 1px solid #900;
+	 background: #d22;
+	 padding: 5px;
+}
+
+.code
+{
+	 font-family: "Courier New", monospace;
+	 font-size: 12pt;
+}
+
+.bold
+{ 
+	 font-weight: bold;
+}
+
+pre.io
+{
+	 border: 1px solid #ccc;
+	 background: white;
+	 padding: 5px;
+}
+
+pre.code
+{
+	 border: 1px solid #ccc;
+	 background: white;
+	 padding: 5px;
+	 margin-left: 30px;
+}
+
+body
+{
+	 background-color: #FFFFCC; 
+	 font-size: 12pt;
+	 font-family: verdana;
+	 margin: 15px;
+	 padding: 15px;
+}
+
+h1
+{
+	 text-align: center;
+	 font-family: times, "times new roman";
+	 font-size: 18pt;
+}
+
+h2
+{
+	 font-size: 12pt;
+	 font-family: garamond, verdana, arial;
+	 margin-top: 30px;
+}
+
+h3
+{
+	 font-size: 12pt;
+	 font-family: garamond, verdana, arial;
+	 margin-top: 0px;
+}
+
+p
+{
+	 text-align: justify;
+	 line-height: 1.5em;
+}
+
+hr
+{
+	 text-align: left;
+	 width: 10%;
+}
+
+table#header
+{
+	 width: 100%;
+	 font-family: garamond, arial, verdana;
+	 font-size: 12pt;
+}
+
+table#header td.judul
+{
+	 text-align: right;
+	 font-weight: bold;
+}
+
+table#header td
+{
+	 padding: 0px 5px 0px 5px;
+	 width: 50%;
+}
+
+</style>
+<title>Daily Quest</title>
+</head>
+
+<body>
+<center>
+<table cellpadding="20" width="100%">
+<tbody><tr>
+<td id="Base">
+
+<!-- title -->
+<h1>Daily Quest</h1>
+
+<!-- author -->
+<div id="penulis"></div>
+<!-- header -->
+<table id="header">
+	 <tbody>
+	 <tr>
+		<td class="judul">Time Limit : </td>
+		<td>1 second / test-case</td>
+	</tr>
+	<tr>
+		 <td class="judul">Memory Limit :</td>
+		<td>32 MB</td>
+	 </tr>
+</tbody></table>
+
+<!-- problem statement -->
+<div id="problem">
+  <h2>DESCRIPTION</h2>
+  <p>Petruk is a talented online-game player. These days he's playing a new game called "The Quest". The game, which is still in beta-testing phase, is holding a daily event to keep the user retention.</p>
+  <p>The event will last for N days. During the event, there will be 4 NPCs (Non Player Character) where the user can take daily quest from. Let's call them NPC 1, 2, 3, and 4. Every day each NPC will serve one quest. The quests will be changed everyday. During a day, a player can only choose 1 of the 4 quests to take and complete it within the day to get the reward. Different quests could have different amount of golds as the reward.</p>
+  <p>To make the event more enjoyable, the administrator has marked M days of the event as special days. During a special day, player will get a special blessing from the NPC once he/she finished the quest. If the i-th day of the event is marked as special, then if a player completed a quest from NPC k (k=1,2,3, or 4), he will get double amount of reward if he takes and complete quest from the same NPC k in the (i+1)-th day.</p>
+  <p>Your task is to help Petruk determine the largest amount of gold he can make out of this event. We assume that Petruk can always complete 1 of the 4 quests in a day.</p>
+
+<!-- format input -->
+<h2>INPUT FORMAT</h2>
+<p>The first line of input contains an integer T denoting the number of cases.</p>
+<p>For each case, the first line contains two integers N and M as stated in the description. The next N lines, each contains four integers A<sub>i</sub>, B<sub>i</sub>, C<sub>i</sub>, and D<sub>i</sub> (i=1,2,...,N) denoting the amount of gold as the reward of quest on the i-th day from NPC 1, NPC 2, NPC 3, and NPC 4 respectively. The next line contains M space-separated integers x<sub>1</sub>, x<sub>2</sub>,..., x<sub>M</sub> denoting special days of the event.</p>
+
+<!-- format output -->
+<h2>OUTPUT FORMAT</h2>
+<p>For each case, output in a line "Case #X:" where X is the case number, starts from 1. Then followed by an integer denoting the maximum number of gold that Petruk can get from this event.</p>
+
+<!-- sample input -->
+<div id="sampleinput_1">
+<h2>INPUT EXAMPLE</h2>
+<pre class="io">2
+3 1
+5 2 6 8
+2 10 3 1
+5 2 9 12
+1
+7 3
+2 8 2 1
+9 2 3 1
+8 7 2 1
+10 2 9 1
+12 3 2 20
+12 8 7 2
+2 3 18 2
+2 3 5
+</pre>
+</div>
+
+<!-- sample output -->
+<div id="sampleoutput_1">
+<h2>OUTPUT EXAMPLE</h2>
+<pre class="io">Case #1: 34
+Case #2: 107
+</pre>
+</div>
+
+
+<!-- keterangan -->
+<h2>EXPLANATION</h2>
+For the 1<sup>st</sup> sample case, Petruk can get the biggest amount of point by following these steps:
+<ul>
+  <li>Day-1: complete quest from NPC 2 to get <strong>2</strong> golds. Because day 1 is a special day, Petruk will also receive blessing from NPC 2</li>
+  <li>Day-2: complete quest from NPC 2 again. With blessing from the previous day, he will get double the original reward 2*10 = <strong>20</strong> golds</li>
+  <li>Day-3: complete quest from NPC 4 to get <strong>12</strong> golds.</li>
+  <li>Total golds gained: 2+20+12 = <strong>34</strong></li>
+</ul>
+
+<h2>CONSTRAINTS</h2>
+<ul>
+	<li>1 ≤ T ≤ 100</li>
+	<li>1 ≤ N ≤ 10<sup>5</sup></li>
+	<li>0 ≤ M ≤ N</li>
+  <li>0 ≤ A<sub>i</sub>, B<sub>i</sub>, C<sub>i</sub>, D<sub>i</sub> ≤ 10<sup>6</sup></li>
+	<li>1 ≤ x<sub>i</sub> ≤ N</li>
+</ul>
+
+</div></td>
+</tr></tbody>
+</table>
+</center>
+
+</body></html>
